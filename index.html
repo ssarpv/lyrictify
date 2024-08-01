@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Lyrictify</title>
+    <link href="./styles.css" rel="stylesheet" />
+  </head>
+  <body>
+    <form id="CardForm">
+      <div id="LogoDiv">
+        <img src="./lyrictify.png" id="LogoImg" />
+      </div>
+      <div id="FormDiv">
+        <div>
+          <label for="TrackNameInput">Track Name</label>
+          <input type="text" name="TrackNameInput" id="TrackNameInput" />
+        </div>
+        <div>
+          <label for="AuthorInput">Author</label>
+          <input type="text" name="AuthorInput" id="AuthorInput" />
+        </div>
+        <div>
+          <label for="ImageInput">Album Cover</label>
+          <input
+            type="file"
+            name="ImageInput"
+            id="ImageInput"
+            accept="image/png, image/jpeg"
+          />
+        </div>
+        <div class="ColorPickerContainer">
+          <div>
+            <label for="BackgroundColorPicker">Background Color</label>
+            <input
+              type="color"
+              id="BackgroundColorPicker"
+              name="BackgroundColor"
+              value="#222222"
+            />
+          </div>
+          <div>
+            <label for="ForegroundColorPicker">Foreground Color</label>
+            <input
+              type="color"
+              id="ForegroundColorPicker"
+              name="ForegroundColor"
+              value="#111111"
+            />
+          </div>
+          <div>
+            <label for="TextColorPicker">Text Color</label>
+            <input
+              type="color"
+              id="TextColorPicker"
+              name="TextColor"
+              value="#eeeeee"
+            />
+          </div>
+        </div>
+        <div>
+          <label for="LyricsInput">Lyrics</label>
+          <textarea name="LyricsInput" id="LyricsInput" rows="6"></textarea>
+        </div>
+        <div>
+          <button type="submit">Submit</button>
+        </div>
+      </div>
+      <div id="FooterDiv">
+        <span>Built with ❤️ by Sarp</span>
+      </div>
+    </form>
+
+    <div id="ResultModal" class="modal">
+      <div class="ModalContent">
+        <span class="CloseButton">&times;</span>
+        <canvas id="CardCanvas" width="1080" height="1920"></canvas>
+        <div class="ButtonContainer">
+          <button type="submit" class="SaveImage">Save Image</button>
+          <button type="submit" class="AddToStory">Share</button>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
