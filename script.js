@@ -11,8 +11,8 @@ const loadFont = (name, url) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  loadFont("Plus Jakarta Sans ExtraBold", "/ExtraBold.ttf");
-  loadFont("Plus Jakarta Sans SemiBold", "/SemiBold.ttf");
+  loadFont("Plus Jakarta Sans ExtraBold", "./ExtraBold.ttf");
+  loadFont("Plus Jakarta Sans SemiBold", "./SemiBold.ttf");
 
   const canvas = document.getElementById("CardCanvas");
   const modal = document.getElementById("ResultModal");
